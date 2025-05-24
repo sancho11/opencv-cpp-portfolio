@@ -17,7 +17,6 @@ Welcome to my **OpenCV C++ Portfolio**, a curated collection of computer vision 
     ├── qr_decoder/          # QR code detection and decoding
     ├── roi_selector/        # Interactive ROI selection tool
     ├── interactive_scaler/  # Real-time image scaling with trackbars
-    ├── coin_detection/      # Morphological coin detection and counting
     ├── autofocus_evaluator/ # Frame focus evaluation using variance metrics
     ├── sketch_and_cartoon/  # Pencil sketch and cartoon effect filters
     ├── blemish_removal/     # Interactive facial imperfection removal
