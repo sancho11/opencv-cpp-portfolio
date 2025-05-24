@@ -1,0 +1,3 @@
+#pragma once
+
+#define DATA_DIR "@CMAKE_SOURCE_DIR@/projects/autofocus_evaluator/data"

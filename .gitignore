@@ -30,3 +30,17 @@
 *.exe
 *.out
 *.app
+
+# -----------------------------
+# Build artefacts
+# -----------------------------
+# CMake build directory
+/build/
+/bin/
+
+# CMake-generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+install_manifest.txt
