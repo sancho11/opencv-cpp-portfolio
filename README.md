@@ -11,18 +11,19 @@ Welcome to my **OpenCV C++ Portfolio**, a curated collection of computer vision 
 ├── LICENSE                  # MIT License
 ├── README.md                # This overview and quick start guide
 ├── .gitignore
+├── .clang-format
 │
-├── projects/                # Self-contained OpenCV demos and assignments
-    ├── sunglasses_collage/  # Fun sunglasses filter collage
-    ├── qr_decoder/          # QR code detection and decoding
-    ├── roi_selector/        # Interactive ROI selection tool
-    ├── interactive_scaler/  # Real-time image scaling with trackbars
-    ├── autofocus_evaluator/ # Frame focus evaluation using variance metrics
-    ├── sketch_and_cartoon/  # Pencil sketch and cartoon effect filters
-    ├── blemish_removal/     # Interactive facial imperfection removal
-    ├── chroma_key/          # Color-based background replacement (chroma key)
-    ├── panorama_stitching/  # Panorama creation using OpenCV Stitcher API
-    └── feature_alignment/   # ORB feature matching and homography alignment
+└── projects/                # Self-contained OpenCV demos and assignments.
+    ├── sunglasses_collage/  # Fun sunglasses filter collage.
+    ├── qr_decoder/          # QR code detection and decoding.
+    ├── roi_selector/        # Interactive ROI selection tool.
+    ├── interactive_scaler/  # Real-time image scaling with trackbars.
+    ├── autofocus_evaluator/ # Frame focus evaluation using variance metrics.
+    ├── sketch_and_cartoon/  # Pencil sketch and cartoon effect filters.
+    ├── blemish_removal/     # Interactive facial imperfection removal.
+    ├── chroma_key/          # Color-based background replacement (chroma key).
+    ├── panorama_stitching/  # Panorama creation using OpenCV Stitcher API.
+    └── feature_alignment/   # ORB feature matching and homography alignment.
 ```
 
 Each subfolder under `projects/` contains:
@@ -36,7 +37,7 @@ Each subfolder under `projects/` contains:
 
 ## Prerequisites
 
-- **C++11** compatible compiler
+- **C++17** compatible compiler
 - **CMake** version ≥ 3.10
 - **OpenCV** library version ≥ 4.11
 
@@ -61,15 +62,13 @@ cmake ..
 make -j$(nproc)
 ```
 
-Each executable will be placed in its respective build folder (e.g., `build/projects/qr_decoder/qr_decoder`).
+Each executable will be placed in the bin directory (e.g., `build/bin/qr_decoder`).
 
 To run a specific project:
 
 ```bash
-./projects/qr_decoder/qr_decoder ../projects/qr_decoder/data/sample_qr.png
+./bin/<project_name>
 ```
-
-Adjust paths as needed for other demos.
 
 ---
 
