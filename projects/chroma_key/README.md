@@ -44,16 +44,22 @@ This project implements an interactive chroma-key compositor using OpenCV in C++
 
 ---
 
-## How to Learn from This Code
+## Example Outputs
 
-- **Inspect the Callback Functions**: See how mouse and trackbar events are registered and routed to update global parameters.
-- **Study `createKeyMask()`**: Observe how HSV thresholds are computed from a sampled key color.
-- **Examine `softenMask()`**: Learn Gaussian blur techniques to smooth binary edges.
-- **Analyze `correctGreenSpill()`**: Understand per-channel operations and mask-based blending for spill suppression.
-- **Compare Blending Modes in `compositeFrame()`**: Contrast the math behind simple alpha blending and Poisson-based seamless cloning.
+| Composite on “Asteroid” Background                  | Composite on “Demo” Background                       |
+| --------------------------------------------------- | ----------------------------------------------------- |
+| ![Asteroid Composite](data/greenscreen-asteroid.example.jpg) | ![Demo Composite](data/greenscreen-demo.example.jpg) |
 
-Whether you’re building your own green-screen tool or simply exploring advanced OpenCV pipelines, this project provides a clear, interactive demonstration of each core concept.
+> **Tip**: Try swapping in your own background images (or video) to see how well your mask and blending parameters hold up under different scenes.
 
 ---
 
-> **Tip**: Experiment with different background images and video resolutions to see how mask size and softness settings affect performance and visual quality.
+## How to Learn from This Code
+
+- **Inspect the Callback Functions**: See how mouse and trackbar events are registered and routed to update global parameters.  
+- **Study `createKeyMask()`**: Observe how HSV thresholds are computed from a sampled key color.  
+- **Examine `softenMask()`**: Learn Gaussian blur techniques to smooth binary edges.  
+- **Analyze `correctGreenSpill()`**: Understand per-channel operations and mask-based blending for spill suppression.  
+- **Compare Blending Modes in `compositeFrame()`**: Contrast the math behind simple alpha blending and Poisson-based seamless cloning.  
+
+Whether you’re building your own green-screen tool or simply exploring advanced OpenCV pipelines, this project provides a clear, interactive demonstration of each core concept.  
