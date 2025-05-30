@@ -11,6 +11,10 @@
 *.gch
 *.pch
 
+# Backup files
+*.bak
+*.bak*
+
 # Compiled Dynamic libraries
 *.so
 *.dylib
