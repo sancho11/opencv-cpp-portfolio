@@ -21,6 +21,7 @@ set(PROJECT_LIST
   feature_alignment
   autofocus_evaluator
   roi_selector
+  skin_smoothing
 )
 
 # 4. Add every directory in projects/

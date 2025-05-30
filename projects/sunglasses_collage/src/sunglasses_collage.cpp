@@ -15,12 +15,6 @@
 std::string datadir = std::string(DATA_DIR);
 
 /**
- * @brief Loads an image from disk and checks for errors.
- * @param path File path
- * @param flags Imread flags (default: IMREAD_UNCHANGED)
- * @return Loaded cv::Mat
- */
-/**
  * @brief Loads an image from disk, exiting on failure.
  * @param path   Full filesystem path to the image.
  * @param flags  OpenCV imread flags (default: IMREAD_UNCHANGED).
