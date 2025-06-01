@@ -157,15 +157,15 @@
 ## Example Output
 
 Below is a sample output for one of the static test images (located in `data/result.png`). It shows:
-- **Top**: Original static image (`face3.png` in this case).  
+- **Top**: Original static image (`musk.jpg` in this case).  
 - **Bottom**: Composite result with chosen sunglasses, reflection, and mustache overlays.
 
 <p align="center">
   <img src="data/result.png" alt="Example Result" width="800"/>
-  <br><em>Example: original vs. composited filters</em>
+  <br><em>Example: Using a source from the dataset</em>
 </p>
 
-*(Note: You can change `Source → face3.png`, `Glasses Image → glasses2.png`, set `Reflection Contrast = 50`, `Glasses Alpha = 75`, and `Mustache Option = mustache5.jpg` to reproduce this exact result.)*
+*(Note: You can change `Source → 1`, `Glasses Image → 1`, set `Reflection Contrast = 50`, `Glasses Alpha = 75`, `Glasses Effect = 1`, `Effect Intensity = 40`,and `Mustache Option = 1` to reproduce this exact result.)*
 
 ---
 
