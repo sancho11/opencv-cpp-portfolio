@@ -22,6 +22,7 @@ set(PROJECT_LIST
   autofocus_evaluator
   roi_selector
   skin_smoothing
+  sunglasses++
 )
 
 # 4. Add every directory in projects/
