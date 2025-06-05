@@ -24,8 +24,9 @@ Welcome to my **OpenCV C++ Portfolio**, a curated collection of computer vision 
     ├── chroma_key/          # Color-based background replacement (chroma key).
     ├── panorama_stitching/  # Panorama creation using OpenCV Stitcher API.
     ├── feature_alignment/   # ORB feature matching and homography alignment.
-    ├── sunglasses++         # Automatic glasses placer. With fun aditional options.
-    └── skin_smoothing/      # Like blemish removal but this have additional improvements for an automatic detection of areas to fix.
+    ├── sunglasses++/        # Automatic glasses placer. With fun aditional options.
+    ├── skin_smoothing/      # Like blemish removal but this have additional improvements for an automatic detection of areas to fix.
+    └── document_scanner/    # Document detection and perspective correction using homography.
 ```
 
 Each subfolder under `projects/` contains:
