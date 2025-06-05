@@ -23,6 +23,7 @@ set(PROJECT_LIST
   roi_selector
   skin_smoothing
   sunglasses++
+  document_scanner
 )
 
 # 4. Add every directory in projects/
