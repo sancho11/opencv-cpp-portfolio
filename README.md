@@ -1,95 +1,88 @@
-# OpenCV C++ Portfolio
+# 🧠 OpenCV Portfolio
 
-Welcome to my **OpenCV C++ Portfolio**, a curated collection of computer vision projects and assignments demonstrating practical experience with OpenCV and C++.
+Welcome to my OpenCV portfolio! This repository showcases a curated set of computer vision projects I've developed using OpenCV (C++). Each project demonstrates practical applications of real-time image processing, feature detection, face filtering, segmentation, and stylization techniques.
 
----
-
-## Repository Structure
-
-```
-├── CMakeLists.txt           # Top-level build configuration
-├── LICENSE                  # MIT License
-├── README.md                # This overview and quick start guide
-├── .gitignore
-├── .clang-format
-│
-└── projects/                # Self-contained OpenCV demos and assignments.
-    ├── sunglasses_collage/  # Fun sunglasses filter collage.
-    ├── qr_decoder/          # QR code detection and decoding.
-    ├── roi_selector/        # Interactive ROI selection tool.
-    ├── interactive_scaler/  # Real-time image scaling with trackbars.
-    ├── autofocus_evaluator/ # Frame focus evaluation using variance metrics.
-    ├── sketch_and_cartoon/  # Pencil sketch and cartoon effect filters.
-    ├── blemish_removal/     # Interactive facial imperfection removal.
-    ├── chroma_key/          # Color-based background replacement (chroma key).
-    ├── panorama_stitching/  # Panorama creation using OpenCV Stitcher API.
-    ├── feature_alignment/   # ORB feature matching and homography alignment.
-    ├── sunglasses++/        # Automatic glasses placer. With fun aditional options.
-    ├── skin_smoothing/      # Like blemish removal but this have additional improvements for an automatic detection of areas to fix.
-    └── document_scanner/    # Document detection and perspective correction using homography.
-```
-
-Each subfolder under `projects/` contains:
-- `include/` directory for header files
-- `src/` directory for source files
-- `data/` for sample images and assets
-- Its own `CMakeLists.txt` to build the executable
-- `README.md` with specific usage notes and examples
+🎯 **All projects are self-contained with code, documentation, and demos.**
 
 ---
 
-## Prerequisites
+## 🕶️ [Sunglasses++](https://github.com/sancho11/sunglassespp)
+**Face Filter & Augmented Reality Effects**
 
-- **C++17** compatible compiler
-- **CMake** version ≥ 3.10
-- **OpenCV** library version ≥ 4.11
+A real-time face filter pipeline that overlays dynamic sunglasses, mustaches, and lens effects using C++ and OpenCV.
 
-On Ubuntu-like systems, you can install dependencies with:
-
-```bash
-sudo apt update
-sudo apt install build-essential cmake libopencv-dev
-```
-
----
-
-## Build & Run Instructions
-
-Clone the repository and build all projects in one step:
-
-```bash
-https://github.com/sancho11/opencv-cpp-portfolio.git
-cd opencv-cpp-portfolio
-mkdir build && cd build
-cmake ..
-make -j$(nproc)
-```
-
-Each executable will be placed in the bin directory (e.g., `build/bin/qr_decoder`).
-
-To run a specific project:
-
-```bash
-./bin/<project_name>
-```
+### Highlights:
+- **Face Tracking**: Haar cascade + MedianFlow MultiTracker.
+- **Binary Masks**: Isolates lens and frame regions for independent blending.
+- **Reflection Texture**: Dynamic lens reflections using contrast-enhanced textures.
+- **Alpha Blending**: Custom opacity control for realistic overlay.
+- **Lens Flare/Scratch**: Gradient-based texture enhancement in HSV space.
+- **Mustache Placement**: Uses color thresholding and centroid estimation for facial anchoring.
+- **Interactive UI**: Real-time parameter tuning with OpenCV trackbars.
 
 ---
 
-## License
+## ✏️ [Sketch & Cartoon](https://github.com/sancho11/sketch_and_cartoon)
+**Stylized Image Processing**
 
-This portfolio is released under the [MIT License](LICENSE).
+Applies a hand-drawn pencil sketch and cartoon effect using classical image filters and transformations.
+
+### Highlights:
+- **Color Space Transformation**: Converts BGR to HSV to process intensity independently.
+- **Pencil Sketching**: High-pass filtering on the V channel with thresholding.
+- **Cartoon Effect**: Bilateral filtering for smooth, flattened color regions.
+- **Edge Enhancement**: Combines sketch edges with smoothed colors for stylized output.
 
 ---
 
-## Contributing
+## 💆‍♀️ [Skin Smoothing](https://github.com/sancho11/skin_smoothing)
+**Automatic Retouching & Blemish Removal**
 
-Although this is primarily a personal portfolio, you are welcome to:
+Performs semantic skin smoothing, blemish detection, and facial enhancement with realistic blending.
 
-1. Fork the repository
-2. Submit issues for bug reports or feature requests
-3. Open pull requests with improvements or new demos
+### Highlights:
+- **Face & Eye Detection**: Region-aware facial analysis using Haar cascades.
+- **Skin Color Modeling**: HSV histogram modeling from face region.
+- **Adaptive Segmentation**: Refines skin mask with morphological ops and GrabCut.
+- **Texture-Aware Repair**: Detects and replaces blemishes using seamless cloning.
+- **Natural Smoothing**: Bilateral filtering for subtle texture correction.
 
-(Optional: No strict contribution guidelines are required unless you intend to grow this into a community project.)
+---
 
-*Happy coding!*  
-*Feel free to explore each demo and adapt the code to your own experiments.*
+## 🎬 [Chroma Key Compositor](https://github.com/sancho11/chroma_key)
+**Real-Time Green Screen Removal**
+
+Implements interactive chroma keying to composite subjects over new backgrounds using HSV-based segmentation.
+
+### Highlights:
+- **Key Color Sampling**: Click-to-select green screen reference from video stream.
+- **HSV Segmentation**: Robust tolerance ranges for color keying.
+- **Soft Masking**: Blurred, inverted binary mask for smooth edge transitions.
+- **Spill Correction**: Automatic green spill suppression with color redistribution.
+- **Interactive UI**: Trackbars to tweak tolerance, softness, and blending modes.
+
+---
+
+## 📄 [Document Scanner](https://github.com/sancho11/document_scanner)
+**Perspective-Corrected Document Capture**
+
+Transforms angled photos of paper documents into clean, top-down scans using contour detection and homography.
+
+### Highlights:
+- **V Channel Emphasis**: Focuses on brightness for better edge clarity.
+- **Canny Edge + Morphology**: Detects document contours and strengthens borders.
+- **Contour Filtering**: Finds the largest 4-sided polygon as the paper outline.
+- **Perspective Transform**: Computes warp matrix with `getPerspectiveTransform()`.
+- **Side-by-Side View**: Shows original vs. scanned output for easy validation.
+
+---
+
+## 📫 Contact
+
+- GitHub: [sancho11](https://github.com/sancho11)
+- Email: [enmanuel.sancho11@gmail.com]
+- LinkedIn: [Enmanuel Sancho](https://www.linkedin.com/in/sancho11/)
+
+---
+
+⭐ If you find these projects useful or interesting, feel free to star the repositories or reach out!

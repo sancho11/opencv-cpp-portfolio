@@ -1,3 +1,0 @@
-#pragma once
-
-#define DATA_DIR "@CMAKE_SOURCE_DIR@/projects/qr_decoder/data"

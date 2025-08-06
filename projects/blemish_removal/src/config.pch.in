@@ -1,3 +1,0 @@
-#pragma once
-
-#define DATA_DIR "@CMAKE_SOURCE_DIR@/projects/blemish_removal/data"
